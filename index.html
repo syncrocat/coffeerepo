@@ -10,8 +10,30 @@
       };
     </script>
 
-    <p>
-    	Random Paragraph text
-    </p>
+    <h1>Beverage Consumption Counter</h1>
+		<div class="firstBox">
+			<p class="BoxText">Current temperature and level of beverage:</p>
+			<!--<div class="tempBox">(temperature) </br></div>
+				<div class="levelBox">(level)</br></div> -->
+			<?php
+				$file = fopen("testfile.txt", "r+")
+				if (!$file) {
+					echo "<p>Unable to read remote file.\n"
+					exit;
+				}
+				
+				fwrite($file, 'rewritten');
+				$fclose($file);
+			?>
+		</div>
+
+
+		<div class="secondBox">
+			<p class="BoxText">Daily log:</p>
+			<div class="logBox">(Level went down by 3% at 3:00 PM etc)</br></div>
+			</br>
+			<input type="reset">
+		</div>
+		</form>
   </body>
 </html>
