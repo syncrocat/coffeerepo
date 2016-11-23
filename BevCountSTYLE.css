@@ -29,12 +29,16 @@ p.BoxText{
 	padding: 5px;
 }
 
-div.smallData iframe{
+div.tempData iframe{
 	border:none;
+	width: 100%;
+	height: 40px;
 }
 
 div.levelData iframe{
 	border:none;
+	width: 100%;
+	height: 40px;
 }
 
 p.smallerBoxText{
