@@ -29,6 +29,14 @@ p.BoxText{
 	padding: 5px;
 }
 
+div.smallData iframe{
+	border:none;
+}
+
+div.levelData iframe{
+	border:none;
+}
+
 p.smallerBoxText{
 	padding: 5px;
 }
