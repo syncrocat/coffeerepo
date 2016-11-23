@@ -10,6 +10,7 @@
       var ws = new WebSocket(HOST);
       var el = document.getElementById('server-time');
       ws.onmessage = function (event) {
+
         el.innerHTML = 'Server time: ' + event.data;
       };
     </script>
@@ -19,16 +20,10 @@
 			<p class="BoxText">Current temperature and level of beverage:</p>
 			<!--<div class="tempBox">(temperature) </br></div>
 				<div class="levelBox">(level)</br></div> -->
-			<?php
-				$file = fopen("testfile.txt", "r+")
-				if (!$file) {
-					echo "<p>Unable to read remote file.\n"
-					exit;
-				}
-				
-				fwrite($file, 'rewritten');
-				$fclose($file);
-			?>
+			 <object data="https://rawgit.com/syncrocat/coffeerepo/master/TempData.txt" type="text/plain"
+				width="500" style="height: 300px">
+				<a href="/path_to_text_file/text.txt">No Support?</a>
+</object>
 		</div>
 
 
