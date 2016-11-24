@@ -22,4 +22,4 @@ setInterval(() => {
   wss.clients.forEach((client) => {
     client.send(new Date().toTimeString());
   });
-}, 30000);
+}, 5000);
