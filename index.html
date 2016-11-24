@@ -12,9 +12,10 @@
       ws.onmessage = function (event) {
 		data = event.data.split(",");
 		console.log(data);
-		document.getElementById("level-text").innerHTML = "Fullness: " + data[data.length - 2] + "%";
-        document.getElementById("tempIframe").src="https://rawgit.com/syncrocat/coffeerepo/master/TempData.html";
-        document.getElementById("levelIframe").src="https://rawgit.com/syncrocat/coffeerepo/master/LevelData.html";
+		temp = data[data.length - 2].slice(0,3);
+		level = data[data.length - 2].slice(3);
+		document.getElementById("temperature-text").innerHTML = "Temperature: " + temp + "C";
+		document.getElementById("level-text").innerHTML = "Fullness: " + level + "%";
       };
     </script>
 
