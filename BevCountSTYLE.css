@@ -2,7 +2,7 @@
 h1 {
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 10px;
-	color: #FFFFFF;
+	color: #f6c078;
 }
 
 body {
@@ -15,8 +15,8 @@ body {
 }
 
 div.firstBox{
-	border: 5px solid #993300;
-	background-color: #ff7733;
+	border: 5px solid #5a1d11;
+	background-color: #f6c078;
 	font-family: Arial, Helvetica, sans-serif;
 	width: 250px;
 	padding: 5px;
