@@ -5,29 +5,13 @@
 	</head>
   <body>
     <p id='server-time'></p>
+    <script src="mongo.js"></script>
     <script>
       var HOST = location.origin.replace(/^http/, 'ws')
       var ws = new WebSocket(HOST);
       var el = document.getElementById('server-time');
-      var mongodb = require('mongodb');
-      var uri = 'mongodb://heroku_xl8h1k6v:atusortq4e2qku8pufc1cbeesb@ds163417.mlab.com:63417/heroku_xl8h1k6v';
       ws.onmessage = function (event) {
-
         el.innerHTML = 'Server time: ' + event.data;
-        mongodb.MongoClient.connect(uri, function(err, db) {
-          if(err) throw err;
-          var times = db.collection('times');
-          var data = { key: event.data };
-          times.insert(data, function(err, result) {
-            if(err) throw err;
-            songs.drop(function(err) {
-              if(err) throw err;
-              db.close(function(err) {
-                if(err) throw err;
-              });
-            });
-          });
-        });
         document.getElementById("tempIframe").src="https://rawgit.com/syncrocat/coffeerepo/master/TempData.html";
         document.getElementById("levelIframe").src="https://rawgit.com/syncrocat/coffeerepo/master/LevelData.html";
       };
