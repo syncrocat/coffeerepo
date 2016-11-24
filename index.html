@@ -10,6 +10,7 @@
       var ws = new WebSocket(HOST);
       var el = document.getElementById('server-time');
       ws.onmessage = function (event) {
+		console.log(event.data);
         el.innerHTML = 'Server time: ' + event.data;
         document.getElementById("tempIframe").src="https://rawgit.com/syncrocat/coffeerepo/master/TempData.html";
         document.getElementById("levelIframe").src="https://rawgit.com/syncrocat/coffeerepo/master/LevelData.html";
