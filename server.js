@@ -23,6 +23,3 @@ setInterval(() => {
     client.send(new Date().toTimeString());
   });
 }, 5000);
-
-const mongodb = require('mongodb');
-const uri = 'mongodb://heroku_xl8h1k6v:atusortq4e2qku8pufc1cbeesb@ds163417.mlab.com:63417/heroku_xl8h1k6v';
