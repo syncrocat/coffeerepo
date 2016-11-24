@@ -12,8 +12,8 @@
       ws.onmessage = function (event) {
 		data = event.data.split(",");
 		console.log(data);
-		temp = data[data.length - 2].slice(0,3);
-		level = data[data.length - 2].slice(3);
+		temp = parseInt(data[data.length - 2].slice(0,3));
+		level = parseInt(data[data.length - 2].slice(3));
 		document.getElementById("temperature-text").innerHTML = "Temperature: " + temp + "C";
 		document.getElementById("level-text").innerHTML = "Fullness: " + level + "%";
       };
