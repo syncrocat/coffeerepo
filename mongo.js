@@ -1,5 +1,3 @@
-var mongodb = require('mongodb');
-var uri = 'mongodb://heroku_xl8h1k6v:atusortq4e2qku8pufc1cbeesb@ds163417.mlab.com:63417/heroku_xl8h1k6v';
 ws.onmessage = function (event) {
   mongodb.MongoClient.connect(uri, function(err, db) {
     if(err) throw err;
