@@ -10,8 +10,9 @@
       var ws = new WebSocket(HOST);
       var el = document.getElementById('server-time');
       ws.onmessage = function (event) {
-		console.log(event.data.split(","));
-        el.innerHTML = 'Server time: ' + event.data;
+		data = event.data.split(",");
+		console.log(data);
+		document.getElementById("level-text").innerHTML = "Fullness: " + data[data.length - 2] + "%";
         document.getElementById("tempIframe").src="https://rawgit.com/syncrocat/coffeerepo/master/TempData.html";
         document.getElementById("levelIframe").src="https://rawgit.com/syncrocat/coffeerepo/master/LevelData.html";
       };
@@ -36,12 +37,10 @@
 			<!--<div class="tempBox">(temperature) </br></div>
 				<div class="levelBox">(level)</br></div> -->
 				<div class="tempData">
-				<iframe src="https://rawgit.com/syncrocat/coffeerepo/master/TempData.html" id="tempIframe">
-   				</iframe>
+				<p id="temperature-text"></p>
    				</div>
    				<div class="levelData">
-   				<iframe src="https://rawgit.com/syncrocat/coffeerepo/master/LevelData.html" id="levelIframe">
-   				</iframe>
+   				<p id="level-text"></p>
    				</div>
 		</div>
 
